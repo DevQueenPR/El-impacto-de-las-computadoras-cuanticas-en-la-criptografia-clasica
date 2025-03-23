@@ -82,6 +82,7 @@ Es esencial fomentar la **investigación en criptografía post-cuántica** y pre
 
 🎯 **Impacto clave:** ¡La computación cuántica está aquí para cambiar el paradigma de la seguridad digital! 
 
+---
 
 ## 👤 Sobre la Autora
 
