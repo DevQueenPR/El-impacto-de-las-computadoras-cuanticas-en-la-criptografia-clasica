@@ -69,7 +69,11 @@ print("\nPress ENTER to simulate Shor’s Algorithm...")
 input()
 print("\nSimulating Shor’s Algorithm...")
 
-# Calcular y formatear el tiempo de Shor's Algorithm
-shor_time = brute_force_time / 1_000_000  # Dividir el tiempo de fuerza bruta por 1,000,000
+#simulación basada en el número de bits de p
+bits_of_p = p.bit_length()
+k = 0.000001  # Factor de ajuste para que el tiempo sea razonable
+shor_time = k * (bits_of_p ** 3)
+
 print(f"\nSimulated Shor’s Algorithm: Private Key = {alice_private}")
-print(f"Shor's time= {brute_force_time:.4f} / 1,000,000 = {shor_time:.10f} seconds")
+print(f"p has {bits_of_p} bits")
+print(f"Simulated Shor's time: {shor_time:.10f} seconds")

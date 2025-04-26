@@ -52,18 +52,16 @@ else:
 
 print(f"Brute Force took: {brute_force_time:.4f} seconds")
 
-# Simulación del algoritmo de Shor (Factorización de la clave privada ECC)
+# Simulación del algoritmo de Shor
 print("\nPress ENTER to simulate Shor’s Algorithm...")
 input()
 print("\nSimulating Shor’s Algorithm...")
-time.sleep(1)  # Simula retraso
 
-shor_start_time = time.time()
+# Ajuste de simulación de Shor basado en los bits del módulo primo
+bits_of_p = curve.p.bit_length()
+k = 0.000001  # Ajuste para hacer el tiempo razonable en la simulación
+shor_time = k * (bits_of_p ** 3)
 
-# Resultado simulado (El algoritmo de Shor recuperaría la clave privada)
-shor_end_time = time.time()
-
-# Calcula y formatea el tiempo del algoritmo de Shor
-shor_time = brute_force_time / 1_000_000  # Divide el tiempo de fuerza bruta por 1,000,000
-print(f"\nTiempo de Shor = {brute_force_time:.4f} / 1,000,000 = {shor_time:.10f} segundos")
-
+# Resultado simulado
+print(f"\nSimulated Shor’s Algorithm: Private Key = {private_key}")
+print(f"Shor's time = {k} * ({bits_of_p}^3) = {shor_time:.10f} seconds")
